@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8"/>
+	<title>
+		Inscripción para reparar materias
+	</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<h1>Inscripción para reparar materias</h1>
+	<!-- <div>
+		<p>
+			Cofla reprobó dos materias, así que tiene que enviar un formulario para poder registrarse en las mesas de examen para poder intentar aprobar las materias.
+		</p>
+		<ul>
+			<li>
+				El formulario debe contener, nombre, email, y materia adeudada.
+			</li>
+			<li>
+				Validar emails y nombres.
+			</li>
+			<li>
+				Enviar al servidor de manera pulida.
+			</li>
+		</ul>
+	</div> -->
+	<form>
+		<fieldset>
+			<legend>
+				<strong>Datos personales</strong>
+			</legend>
+			<div>
+				<span>Nombre y apellido</span><br>
+				<input id="inputTextoNombre" class="inputTextoNombre" type="text" name="nombreCompleto" value="" required>
+				<span id="spanCampoRequeridoNombre" hidden="true"></span>
+			</div>
+			<div>
+				<span>Correo electrónico</span><br>
+				<input id="inputEmailCorreoElectronico" class="inputEmailCorreoElectronico" type="email" name="email" value="" required>
+				<span id="spanCampoRequeridoCorreo" hidden="true">Campo requerido</span>
+			</div>
+		</fieldset>
+		<fieldset id="inputCheckboxMaterias">
+			<legend>
+				<strong>Materias a reparar</strong>
+			</legend>
+			<div>
+				<label>
+					<input id="inputCheckboxMateriaMatematica" type="checkbox" name="matematica">
+					Matemática
+				</label>
+			</div>
+			<div>
+				<label>
+					<input id="inputCheckboxMateriaProgramacion" type="checkbox" name="programacion">
+					Programación
+				</label>
+			</div>
+			<div>
+				<label>
+					<input id="inputCheckboxMateriaRedesDeComputadoras" type="checkbox" name="redesDeComputadoras">
+					Redes de computadoras
+				</label>
+			</div>
+			<div>
+				<label>
+					<input id="inputCheckboxMateriaIngenieriaDeSoftware" type="checkbox" name="ingenieriaDeSoftware">
+					Ingeniería de Software
+				</label>
+			</div>
+			<div>
+				<label>
+					<input id="inputCheckboxMateriaBaseDeDatos" type="checkbox" name="baseDeDatos">
+					Base de datos
+				</label>
+			</div>
+			<p id="parrafoCampoRequeridoMaterias" hidden="true"></p>
+		</fieldset>
+	</form>
+	<button id="buttonEnviarFormulario" class="buttonEnviarFormulario">Enviar datos</button>
+	<span id="mensajeDeFormularioEnviado" class="mensajeDeFormularioEnviado" hidden="true">
+		<p>
+			¡Fomulario enviado con exito!
+		</p>
+		<p>
+			Si quiere ver los datos enviados al servidor, abra la consola.			
+		</p>
+	</span>
+	
+	<script src="scripts.js"></script>
+</body>
+</html>
